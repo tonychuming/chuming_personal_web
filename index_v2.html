@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #f39c12;
-            --background-color: #f4f4f4;
-            --text-color: #333;
-            --card-background: #ffffff;
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #1abc9c;
+            --background-color: #45576a;
+            --text-color: #ecf0f1;
+            --card-background: #34495e;
             --nav-height: 70px;
         }
         
@@ -37,8 +37,9 @@
             justify-content: space-between;
             padding: 20px 40px;
             background-color: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .profile-info {
@@ -47,13 +48,13 @@
         }
 
         .profile-image {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 5px solid white;
+            border: 5px solid var(--accent-color);
             overflow: hidden;
-            background-color: #ddd;
-            margin-right: 20px;
+            background-color: var(--secondary-color);
+            margin-right: 30px;
             transition: transform 0.3s ease;
         }
 
@@ -67,23 +68,20 @@
             transform: scale(1.1);
         }
 
-        .profile-details {
-            max-width: 70%;
-        }
-
         .profile-details h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin: 0;
+            font-weight: 700;
         }
 
         .profile-details p {
             margin: 10px 0;
-            font-size: 1.1rem;
-            color: #f4f4f4;
+            font-size: 1.2rem;
+            color: var(--accent-color);
         }
 
         nav {
-            background: rgba(44, 62, 80, 0.9);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             padding: 1rem 0;
             position: sticky;
             top: 0;
@@ -92,7 +90,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: background 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         nav ul {
@@ -105,19 +103,20 @@
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
-            color: white;
+            color: var(--text-color);
             text-decoration: none;
             font-weight: bold;
             font-size: 1.2rem;
-            transition: color 0.3s ease;
+            transition: color 0.3s ease, transform 0.3s ease;
         }
 
         nav ul li a:hover {
             color: var(--accent-color);
+            transform: scale(1.1);
         }
 
         .section {
@@ -125,27 +124,22 @@
             margin-bottom: 30px;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
         }
 
         h2 {
-            color: var(--secondary-color);
+            color: var(--accent-color);
             border-bottom: 3px solid var(--accent-color);
             display: inline-block;
             margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 2rem;
         }
 
         .education, .project {
@@ -167,7 +161,7 @@
 
         .contact-info {
             background-color: var(--secondary-color);
-            color: white;
+            color: var(--text-color);
             padding: 30px;
             border-radius: 10px;
             text-align: center;
@@ -180,12 +174,13 @@
         }
 
         .skill-item {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--accent-color);
+            color: var(--text-color);
             padding: 8px 15px;
             border-radius: 20px;
-            font-size: 0.9em;
+            font-size: 1rem;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: 700;
         }
 
         .skill-item:hover {
@@ -196,8 +191,9 @@
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: var(--secondary-color);
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
         }
 
         .social-links {
@@ -205,8 +201,8 @@
         }
 
         .social-links a {
-            color: white;
-            margin: 0 10px;
+            color: var(--text-color);
+            margin: 0 15px;
             text-decoration: none;
             font-size: 1.5em;
             transition: color 0.3s ease;
@@ -232,11 +228,11 @@
             }
 
             .profile-details h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .profile-details p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             nav ul {
@@ -269,13 +265,13 @@
             background-color: var(--card-background);
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .testimonial:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
         }
 
         .testimonial p {
@@ -287,7 +283,7 @@
             margin-top: 10px;
             text-align: right;
             font-weight: bold;
-            color: var(--secondary-color);
+            color: var(--accent-color);
         }
     </style>
 </head>
@@ -367,7 +363,7 @@
                         <li>Developed a machine learning model for the quality classification of roasted coffee beans, utilizing various feature extraction and ML classifier models.</li>
                         <li>Authored a research paper detailing the methodology and results, currently under preparation for journal submission.</li>
                     </ul>
-                    <p><a href="https://github.com/tonychuming/coffeebeans_classification.git" target="_blank">View Project on GitHub</a></p>
+                    <p><a href="https://github.com/tonychuming/coffeebeans_classification.git" target="_blank" style="color: var(--accent-color);">View Project on GitHub</a></p>
                 </div>
             </div>
             
@@ -441,7 +437,7 @@
             <p>Phone: +66 931203988</p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/chuminglin" target="_blank">LinkedIn</a>
-                <a href="https://github.com/chuminglin" target="_blank">GitHub</a>
+                <a href="https://github.com/tonychuming" target="_blank">GitHub</a>
             </div>
         </section>
     </div>
