@@ -1,8 +1,16 @@
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
   "dependencies": {
     "animate.css": "^4.1.1",
     "particles.js": "^2.0.0",
     "typed.js": "^2.1.0",
     "vue-parallaxy": "^1.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "gh-pages": "^6.1.1"
   }
 }
