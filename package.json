@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "particles.js": "^2.0.0",
+    "typed.js": "^2.1.0",
+    "vue-parallaxy": "^1.1.1"
+  }
+}
