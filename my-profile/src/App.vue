@@ -5,6 +5,8 @@
       <div class="orb orb2"></div>
       <div class="orb orb3"></div>
     </div>
+    <!-- Add the particles-js div here -->
+    <div id="particles-js"></div>
     <div class="scroll-progress"></div>
     <AppHeader />
     <main>
@@ -24,18 +26,20 @@
   </div>
 </template>
 
+
 <script>
-import 'particles.js/particles'
-import AppHeader from './components/AppHeader.vue'
-import HeroSection from './components/HeroSection.vue'
-import AboutSection from './components/AboutSection.vue'
-import EducationSection from './components/EducationSection.vue'
-import ProjectsSection from './components/ProjectsSection.vue'
-import SkillsSection from './components/SkillsSection.vue'
-import AchievementsSection from './components/AchievementsSection.vue'
-import TestimonialsSection from './components/TestimonialsSection.vue'
-import ContactSection from './components/ContactSection.vue'
-import AppFooter from './components/AppFooter.vue'
+import { nextTick } from 'vue';
+import 'particles.js/particles';
+import AppHeader from './components/AppHeader.vue';
+import HeroSection from './components/HeroSection.vue';
+import AboutSection from './components/AboutSection.vue';
+import EducationSection from './components/EducationSection.vue';
+import ProjectsSection from './components/ProjectsSection.vue';
+import SkillsSection from './components/SkillsSection.vue';
+import AchievementsSection from './components/AchievementsSection.vue';
+import TestimonialsSection from './components/TestimonialsSection.vue';
+import ContactSection from './components/ContactSection.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
   name: 'App',
@@ -52,7 +56,9 @@ export default {
     AppFooter
   },
   mounted() {
-    this.initParticles();
+    nextTick(() => {
+      this.initParticles();
+    });
     this.initScrollProgress();
   },
   methods: {
@@ -85,7 +91,8 @@ export default {
       });
     }
   }
-}
+};
+
 </script>
 
 <style src="@/assets/styles.css"></style>
