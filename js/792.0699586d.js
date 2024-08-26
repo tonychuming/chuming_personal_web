@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmy_profile"]=self["webpackChunkmy_profile"]||[]).push([[792],{792:function(e,f,s){s.r(f),f["default"]=s.p+"assets/mfu-scholarship-certificate.f0744974.pdf"}}]);
+//# sourceMappingURL=792.0699586d.js.map
