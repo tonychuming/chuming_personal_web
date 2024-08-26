@@ -1,6 +1,12 @@
 {
-  "name": "your-project-name",
+  "name": "personal_web",
   "version": "1.0.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
   "dependencies": {
     "animate.css": "^4.1.1",
     "particles.js": "^2.0.0",

@@ -12,6 +12,6 @@ module.exports = {
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/ <chuming_personal_web>/'
+    ? '/chuming_personal_web/'
     : '/'
 }
