@@ -7,7 +7,7 @@
           <img src="@/assets/profile.jpeg" alt="Chuming Lin">
         </div>
         <div id="about-text">
-          <p>I am a final-year Software Engineering student at Mae Fah Luang University, passionate about computer vision, machine learning, and data science. With a strong academic background and hands-on project experience, I am eager to contribute to cutting-edge research and innovative solutions in these fields.</p>
+          <h3>I am a final-year Software Engineering student at Mae Fah Luang University, passionate about computer vision, machine learning, and data science. With a strong academic background and hands-on project experience, I am eager to contribute to cutting-edge research and innovative solutions in these fields.</h3>
         </div>
       </div>
     </div>
