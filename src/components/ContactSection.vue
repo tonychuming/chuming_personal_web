@@ -15,6 +15,7 @@
             <div class="social-links">
               <a href="https://www.linkedin.com/in/chuminglin" target="_blank"><i class="fab fa-linkedin"></i></a>
               <a href="https://github.com/tonychuming" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100071700158816&mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
             </div>
           </div>
           <form class="contact-form" @submit.prevent="submitForm">

@@ -20,7 +20,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       new Typed('#typed-text', {
-        strings: ['Software Engineering Student', 'Chinese'],
+        strings: ['Mae Fah Luang University', 'Software Engineering Student', 'Chinese'],
         typeSpeed: 50,
         backSpeed: 50,
         loop: true,

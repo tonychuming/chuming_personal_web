@@ -1,4 +1,5 @@
 :root {
+    --btn-text-color: #ffffff;
     --primary-color: #ffffff;
     --secondary-color: #f0f0f0;
     --accent-color: #3498db;
@@ -12,6 +13,7 @@
 }
 
 [data-theme="dark"] {
+    --btn-text-color: #ffffff;
     --primary-color: #1a1a2e;
     --secondary-color: #16213e;
     --accent-color: #e94560;
@@ -415,53 +417,90 @@ h2::after {
 /* Education Timeline */
 .education-timeline {
     position: relative;
-}
-
-.timeline-item {
-    padding: 40px;
+    padding-left: 60px; /* 为更大的图像腾出空间 */
+  }
+  
+  .timeline-item {
+    padding: 30px;
     background-color: var(--card-background);
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 60px; /* 增加项目之间的间距 */
     position: relative;
     z-index: 1;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-}
-
-.timeline-item:hover {
+  }
+  
+  .timeline-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-item::before {
+  }
+  
+  .timeline-item::before {
     content: '';
     position: absolute;
-    left: -10px;
+    left: -30px; /* 调整位置 */
     top: 50%;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
     background-color: var(--accent-color);
     border-radius: 50%;
-}
-
-.timeline-img {
-    width: 80px;
-    height: 80px;
+  }
+  
+  .timeline-img {
+    width: 120px; /* 增加宽度 */
+    height: 120px; /* 增加高度 */
     border-radius: 50%;
     overflow: hidden;
     position: absolute;
-    left: -40px;
+    left: -90px; /* 调整位置 */
     top: 50%;
     transform: translateY(-50%);
     border: 5px solid var(--background-color);
-}
-
-.timeline-img img {
+  }
+  
+  .timeline-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+  }
+  
+  .timeline-content {
+    margin-left: 20px; /* 为图像腾出空间 */
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.5rem; /* 增加标题字体大小 */
+    margin-bottom: 10px;
+    color: var(--accent-color);
+  }
+  
+  .timeline-details p {
+    font-size: 1.1rem; /* 增加正文字体大小 */
+    line-height: 1.6;
+    margin-bottom: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .education-timeline {
+      padding-left: 40px;
+    }
+  
+    .timeline-img {
+      width: 80px;
+      height: 80px;
+      left: -60px;
+    }
+  
+    .timeline-item::before {
+      left: -20px;
+    }
+  
+    .timeline-content {
+      margin-left: 0;
+    }
+  }
 
 /* Projects Section */
 .projects-grid {
@@ -627,32 +666,204 @@ h2::after {
     }
   }
 
-/* Achievements Section */
-.achievements-list {
+/* Achievement Section */
+.achievements-section {
+    background-color: transparent;
+    padding: 2rem 0;
+  }
+  
+  .achievements-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.achievement-item {
-    background-color: var(--card-background);
-    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .achievement-item {
+    background-color: rgba(22, 33, 62, 0.3); /* 更透明的背景 */
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-}
-
-.achievement-item:hover {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px); /* 添加模糊效果 */
+  }
+  
+  .achievement-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.achievement-item i {
-    font-size: 40px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(22, 33, 62, 0.4); /* 悬停时稍微加深 */
+  }
+  
+  .achievement-icon {
+    font-size: 2.5rem;
     color: var(--accent-color);
-    margin-bottom: 20px;
-}
+    margin-bottom: 1rem;
+  }
+  
+  .achievement-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .achievement-description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+  }
+  
+  .achievement-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .achievement-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+  
+  .achievement-btn i {
+    margin-right: 0.5rem;
+  }
+  
+  .achievement-btn-view {
+    background-color: rgba(231, 76, 60, 0.8); /* 半透明红色 */
+    color: #ffffff;
+  }
+  
+  .achievement-btn-view:hover {
+    background-color: rgba(192, 57, 43, 1); /* 悬停时加深 */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .achievement-btn-download {
+    background-color: rgba(46, 204, 113, 0.8); /* 半透明绿色 */
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .achievement-btn-download:hover {
+    background-color: rgba(39, 174, 96, 1); /* 悬停时加深 */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 确保按钮文字在所有情况下都清晰可见 */
+  .achievement-btn-view, .achievement-btn-download {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 响应式调整 */
+  @media (max-width: 768px) {
+    .achievements-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .achievement-item {
+      padding: 1.5rem;
+    }
+  }
+
+  /* 模态框样式 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+  }
+  
+  .modal-body {
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  
+  .modal-footer {
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .modal-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal-btn-download {
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+  }
+  
+  .modal-btn-download:hover {
+    background-color: #c0392b;
+  }
+  
+  /* 转场动画 */
+  .modal-enter-active, .modal-leave-active {
+    transition: opacity 0.3s;
+  }
+  
+  .modal-enter, .modal-leave-to {
+    opacity: 0;
+  }
+  
+  .certificate-preview {
+    margin-top: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
 
 /* Testimonials Section */
 .testimonial-slider {
